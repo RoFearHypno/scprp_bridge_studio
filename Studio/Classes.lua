@@ -1,12 +1,48 @@
--- / Variables \ --
-local Classes = {}
--- \           / --
-
--- / Functionality \ --
-for Class, Mod in script:GetChildren() do
-	local Data = require(Mod)
-	Classes[Class] = Data
-end
-
-return Classes
--- \               / --
+return {
+	Part={
+		Size=Vector3.new(4,1.2,2),
+		CFrame=CFrame.new(0,0,0,1,0,0,0,1,0,0,0,1),
+		Color=Color3.fromRGB(163,162,165),
+		Anchored=false,
+		Name="Part",
+		FrontSurface="Smooth",
+		BackSurface="Smooth",
+		RightSurface="Smooth",
+		LeftSurface="Smooth",
+		TopSurface="Studs",
+		BottomSurface="Inlet"
+	},
+	SpecialMesh={
+		Scale=Vector3.new(1,1,1),
+		Offset=Vector3.new(0,0,0),
+		MeshType="Head",
+		MeshId="",
+		VertexColor=Vector3.new(1,1,1),
+		Name="Mesh",
+		TextureId=""
+	},
+	Decal={
+		Color3=Color3.new(1,1,1),
+		Texture="",
+		Rotation=0,
+		Transparency=0,
+		UVOffset=Vector2.new(0,0),
+		UVScale=Vector2.new(1,1),
+		ZIndex=1,
+		Face="Front",
+		Name="Decal",
+	},
+	Texture = {
+		Color3=Color3.new(1,1,1),
+		Texture="",
+		Rotation=0,
+		Transparency=0,
+		OffsetStudsU=0,
+		OffsetStudsV=0,
+		StudsPerTileU=2,
+		StudsPerTileV=2,
+		ZIndex=1,
+		Face="Front",
+		Name="Decal",
+	}
+}
