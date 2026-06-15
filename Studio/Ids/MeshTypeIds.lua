@@ -1,0 +1,20 @@
+return {
+	IdToMeshType={
+		[1]="Brick",
+		[2]="Cylinder",
+		[3]="FileMesh",
+		[4]="Head",
+		[5]="Sphere",
+		[6]="Torso",
+		[7]="Wedge"
+	},
+	MeshTypeToId={
+		["Brick"]=1,
+		["Cylinder"]=2,
+		["FileMesh"]=3,
+		["Head"]=4,
+		["Sphere"]=5,
+		["Torso"]=6,
+		["Wedge"]=7
+	}
+}
