@@ -2,10 +2,13 @@
 -- \          / --
 
 -- / Variables \ --
-local ClassBases = require(script.ClassBases)
-local TblToString = require(script.TblToString)
-local Decoder = require(script.Decoder)
-local Encoder = require(script.Encoder)
+local ClassBases = require(script.Classes)
+--local TblFormater = require(script.TblFormat)
+local DataFolder = script.Data
+local Decoder = require(DataFolder.Decoder)
+local Encoder = require(DataFolder.Encoder)
+
+local ExportLocation = workspace.export_stuff
 -- \           / --
 
 -- / Functionality \ --
@@ -50,8 +53,8 @@ function Encode(List)
 	return Encoded
 end
 
-local Data = Encode(workspace.export_stuff:GetDescendants())
-workspace.export_stuff:ClearAllChildren()
+local Data = Encode(ExportLocation:GetDescendants())
+ExportLocation:ClearAllChildren()
 
 function DecodeAndCreate(EncodedData)
 	local IdToObject = {}
